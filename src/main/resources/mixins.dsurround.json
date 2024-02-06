@@ -4,6 +4,10 @@
   "package": "org.blockartistry.mod.DynSurround.mixins",
   "refmap": "mixins.dsurround.refmap.json",
   "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "overwrites": {
+    "conformVisibility": true
+  },
   "mixins": [],
   "client": [],
   "server": []

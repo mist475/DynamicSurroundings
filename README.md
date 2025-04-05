@@ -7,6 +7,7 @@ Changes from the last official 1.7.10 version (1.0.6.4):
 - Fix version check + notification
 - Fix playing wrong sounds when in lotr biomes
 - Add lotr block config
+- Add et futurum requiem blockmap by Omgise
 
 ### License
 The MIT License (MIT)

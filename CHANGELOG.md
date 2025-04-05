@@ -1,3 +1,7 @@
+### DynamicSurroundings-1.7.10-1.0.7.6
+**What's New**
+* Add Et Futurum Requiem blockmap by Omgise
+
 ### DynamicSurroundings-1.7.10-1.0.7.5
 **Fixes**
 * Fix support for all mods that use access transformers on classes with mixins (Thanks Kaguya233qwq & Makamys)

@@ -1,5 +1,5 @@
 dependencies {
-    api("com.github.GTNewHorizons:waila:1.8.0:dev")
+    api("com.github.GTNewHorizons:waila:1.8.4:dev")
     api files('libs/Calendar-1.7.10-1.0-9-deobf.jar')
     //Required for Date fallback/compatibility
     compileOnly rfg.deobf('curse.maven:lotr-423748:4091561')

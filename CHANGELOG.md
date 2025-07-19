@@ -1,3 +1,7 @@
+### DynamicSurroundings-1.7.10-1.0.7.7
+**Fixes**
+* Fix nullpointer during initialisation of settings (caused issue with new unimixins update)
+
 ### DynamicSurroundings-1.7.10-1.0.7.6
 **What's New**
 * Add Et Futurum Requiem blockmap by Omgise

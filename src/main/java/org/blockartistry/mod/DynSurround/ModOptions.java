@@ -64,12 +64,12 @@ public final class ModOptions {
 	@RestartRequired
 	public static boolean enableVersionChecking = true;
 
-    @Parameter(category = "Compat", property = "Use reflection to retrieve lotr mod biomes", defaultValue = "false")
+    @Parameter(category = "compat", property = "Use reflection to retrieve lotr mod biomes", defaultValue = "false")
     @Comment("Some lotr versions don't have the LOTRDimension class, this option uses reflection on the LOTRBiome class instead")
     @RestartRequired
     public static boolean useLotrReflection = false;
 
-    @Parameter(category = "Compat", property = "Don't create lotr proxy", defaultValue = "false")
+    @Parameter(category = "compat", property = "Don't create lotr proxy", defaultValue = "false")
     @Comment("don't create lotr proxy, even if lotr is present")
     @RestartRequired
     public static boolean useNoLotrProxy = false;

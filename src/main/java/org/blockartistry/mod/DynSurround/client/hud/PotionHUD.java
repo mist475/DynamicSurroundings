@@ -69,7 +69,7 @@ public class PotionHUD extends Gui implements IGuiOverlay {
 		final FontRenderer font = mc.fontRenderer;
 		final EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 
-		final int guiLeft = 2;
+		int guiLeft = 2;
 		int guiTop = 2;
 
 		final Collection<PotionEffect> collection = player.getActivePotionEffects();
@@ -81,13 +81,20 @@ public class PotionHUD extends Gui implements IGuiOverlay {
 			GL11.glDisable(GL11.GL_LIGHTING);
 			GL11.glTranslatef(GUILEFT, GUITOP, 0.0F);
 			GL11.glScalef(SCALE, SCALE, SCALE);
-			int k = 33;
+			final boolean horizontal = ModOptions.potionHudHorizontal;
 
-			if (collection.size() > 7) {
-				k = 198 / (collection.size() - 1);
+			// Vertical spacing collapses as more effects stack up; the horizontal
+			// layout instead advances by a fixed element width. Only one of the two
+			// steps is non-zero, so the same loop drives either direction.
+			int verticalStep = 33;
+			if (!horizontal && collection.size() > 7) {
+				verticalStep = 198 / (collection.size() - 1);
 			}
 
-			for (final Iterator<PotionEffect> iterator = collection.iterator(); iterator.hasNext(); guiTop += k) {
+			final int rowStep = horizontal ? 0 : verticalStep;
+			final int colStep = horizontal ? 120 : 0;
+
+			for (final Iterator<PotionEffect> iterator = collection.iterator(); iterator.hasNext(); guiTop += rowStep, guiLeft += colStep) {
 				final PotionEffect potioneffect = iterator.next();
 				final int potionId = potioneffect.getPotionID();
 				if (potionId < 0 || potionId >= Potion.potionTypes.length)

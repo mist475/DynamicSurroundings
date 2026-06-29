@@ -333,9 +333,10 @@ public final class ModOptions {
 	public static final String CONFIG_POTION_HUD_LEFT_OFFSET = "Left Offset";
 	public static final String CONFIG_POTION_HUD_TOP_OFFSET = "Top Offset";
 	public static final String CONFIG_POTION_HUD_SCALE = "Display Scale";
+	public static final String CONFIG_POTION_HUD_HORIZONTAL = "Horizontal Layout";
 	private static final List<String> potionHudSort = Arrays.asList(CONFIG_POTION_HUD_ENABLE,
 			CONFIG_POTION_HUD_TRANSPARENCY, CONFIG_POTION_HUD_SCALE, CONFIG_POTION_HUD_TOP_OFFSET,
-			CONFIG_POTION_HUD_LEFT_OFFSET);
+			CONFIG_POTION_HUD_LEFT_OFFSET, CONFIG_POTION_HUD_HORIZONTAL);
 
 	@Parameter(category = CATEGORY_POTION_HUD, property = CONFIG_POTION_HUD_ENABLE, defaultValue = "true")
 	@Comment("Enable display of potion icons in display")
@@ -357,6 +358,9 @@ public final class ModOptions {
 	@MinMaxFloat(min = 0.0F, max = 1.0F)
 	@Comment("Size scale of icons (lower is smaller)")
 	public static float potionHudScale = 0.5F;
+	@Parameter(category = CATEGORY_POTION_HUD, property = CONFIG_POTION_HUD_HORIZONTAL, defaultValue = "false")
+	@Comment("Lay out potion effects in a horizontal row instead of a vertical column")
+	public static boolean potionHudHorizontal = false;
 
 	public static void load(final Configuration config) {
 

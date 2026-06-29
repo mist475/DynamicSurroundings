@@ -1,3 +1,10 @@
+### DynamicSurroundings-1.7.10-1.0.8.0
+**What's New**
+* Add config option for horizontal potion HUD layout. By https://github.com/Eldrinn-Elantey
+
+**Fixes**
+* Fix GregTech (nh version) Jukebox being silent. By https://github.com/Eldrinn-Elantey
+
 ### DynamicSurroundings-1.7.10-1.0.7.7
 **Fixes**
 * Fix nullpointer during initialisation of settings (caused issue with new unimixins update)

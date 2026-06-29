@@ -52,8 +52,8 @@ public class ResourceURLConnection extends URLConnection {
 
 	@Override
 	public InputStream getInputStream() throws IOException {
-		final InputStream stream = Minecraft.getMinecraft().getResourceManager().getResource(this.resource)
-				.getInputStream();
+		final InputStream stream = Minecraft.getMinecraft().getResourceManager()
+				.getResource(SoundCache.actualResource(this.resource)).getInputStream();
 		return new SoundInputStream(stream);
 	}
 

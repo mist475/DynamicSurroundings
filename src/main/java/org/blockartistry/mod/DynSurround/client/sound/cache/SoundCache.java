@@ -51,11 +51,24 @@ public final class SoundCache {
 
 	private static final byte[] SILENCE = getBuffer(new ResourceLocation("dsurround:sounds/ambient/silence.ogg"));
 
+	// Some mods (e.g. GregTech's seeking jukebox) append a query suffix to the
+	// resource path so a custom codec can be selected and parameters passed via
+	// the URL. That suffix is not part of the real file name, so strip it before
+	// resolving the resource. The original (suffixed) location is still used for
+	// the URL spec so codec selection keeps working.
+	static ResourceLocation actualResource(@Nonnull final ResourceLocation resource) {
+		final String path = resource.getResourcePath();
+		final int idx = path.indexOf('?');
+		if (idx < 0)
+			return resource;
+		return new ResourceLocation(resource.getResourceDomain(), path.substring(0, idx));
+	}
+
 	private static byte[] getBuffer(@Nonnull final ResourceLocation resource) {
 		InputStream stream = null;
 
 		try {
-			stream = manager.getResource(resource).getInputStream();
+			stream = manager.getResource(actualResource(resource)).getInputStream();
 			// It's possible that available() returns 0. This generally means
 			// the stream has no idea about the number of bytes. If it reports
 			// 64K or greater assume it needs to be streamed from the JAR.

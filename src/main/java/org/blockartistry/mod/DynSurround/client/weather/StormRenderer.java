@@ -156,8 +156,8 @@ public class StormRenderer implements IAtmosRenderer {
 					if (l1 != i2) {
 						random.setSeed(locX * locX * 3121 + locX * 45238971 ^ locZ * locZ * 418711 + locZ * 13761);
 
-						final float heightTemp = world.getWorldChunkManager()
-								.getTemperatureAtHeight(biome.getFloatTemperature(locX, l1, locZ), k1);
+						final float heightTemp = WeatherUtils.getPrecipitationTemperature(world, biome, locX, l1,
+							locZ, k1);
 						float f10;
 
 						if (!hasDust && heightTemp >= 0.15F) {

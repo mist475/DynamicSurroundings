@@ -173,7 +173,7 @@ public class StormSplashRenderer {
 			final boolean hasDust = WeatherUtils.biomeHasDust(biome);
 
 			if (locY <= playerY + RANGE && locY >= playerY - RANGE && (hasDust || (BiomeRegistry.hasPrecipitation(biome)
-					&& biome.getFloatTemperature(locX, locY, locZ) >= 0.15F))) {
+					&& WeatherUtils.getTemperature(worldclient, biome, locX, locY, locZ) >= 0.15F))) {
 
 				final Block block = worldclient.getBlock(locX, locY - 1, locZ);
 				final double posX = locX + RANDOM.nextFloat();

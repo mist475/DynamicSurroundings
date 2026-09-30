@@ -1,4 +1,17 @@
 // Add any additional repositories for your dependencies here
 
 repositories {
+    ivy {
+        name = "SeasonalHorizonsGitHubReleases"
+        url = "https://github.com/DarkShadow44/SeasonalHorizons/releases/download"
+        patternLayout {
+            artifact "[revision]/[artifact]-[revision](-[classifier]).[ext]"
+        }
+        metadataSources {
+            artifact()
+        }
+        content {
+            includeGroup "com.darkshadow44.seasonalhorizons"
+        }
+    }
 }

@@ -31,6 +31,7 @@ import java.util.List;
 import org.blockartistry.mod.DynSurround.ModLog;
 import org.blockartistry.mod.DynSurround.ModOptions;
 import org.blockartistry.mod.DynSurround.client.ClientEffectHandler;
+import org.blockartistry.mod.DynSurround.client.WeatherUtils;
 import org.blockartistry.mod.DynSurround.client.footsteps.game.system.ForgeDictionary;
 import org.blockartistry.mod.DynSurround.client.footsteps.game.user.GenerateBlockReport;
 import org.blockartistry.mod.DynSurround.client.hud.GuiHUDHandler;
@@ -67,6 +68,7 @@ public class ProxyClient extends Proxy {
 	@Override
 	public void postInit(final FMLPostInitializationEvent event) {
 		super.postInit(event);
+		WeatherUtils.initSeasonalHorizonsCompat();
 
 		if (ModOptions.enableDebugLogging) {
 			final SoundHandler handler = Minecraft.getMinecraft().getSoundHandler();

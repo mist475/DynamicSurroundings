@@ -1,4 +1,5 @@
 dependencies {
+    compileOnly("com.darkshadow44.seasonalhorizons:seasonalhorizons:0.0.2:api")
     api("com.github.GTNewHorizons:waila:1.19.30:dev")
     api files('libs/Calendar-1.7.10-1.0-9-deobf.jar')
     //Required for Date fallback/compatibility

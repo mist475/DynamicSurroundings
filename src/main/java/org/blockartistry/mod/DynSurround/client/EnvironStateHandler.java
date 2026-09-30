@@ -214,7 +214,7 @@ public class EnvironStateHandler implements IClientEffectHandler {
 			final int posY = MathHelper.floor_double(player.posY);
 			final int posZ = MathHelper.floor_double(player.posZ);
 			final BiomeGenBase trueBiome = PlayerUtils.getPlayerBiome(player, true);
-			EnvironState.freezing = trueBiome.getFloatTemperature(posX, posY, posZ) < 0.15F;
+			EnvironState.freezing = WeatherUtils.getTemperature(world, trueBiome, posX, posY, posZ) < 0.15F;
 			EnvironState.temperatureCategory = "tc" + trueBiome.getTempCategory().name().toLowerCase();
 			EnvironState.humid = trueBiome.isHighHumidity();
 			EnvironState.dry = trueBiome.getFloatRainfall() == 0;

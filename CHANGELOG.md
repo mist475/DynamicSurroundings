@@ -1,3 +1,7 @@
+### DynamicSurroundings-1.7.10-1.0.9.0
+**What's New**
+* Compatibility with Seasonal Horizons. By https://github.com/DarkShadow44
+
 ### DynamicSurroundings-1.7.10-1.0.8.0
 **What's New**
 * Add config option for horizontal potion HUD layout. By https://github.com/Eldrinn-Elantey

@@ -1,16 +1,21 @@
-[
 {
-  "modid": "$modId",
-  "name": "$modName",
-  "description": "Improving Minecraft's sight and sound experience",
-  "version": "$modVersion",
-  "mcversion": "$minecraftVersion",
-  "url": "https://github.com/mist475/DynamicSurroundings/wiki",
-  "updateUrl": "",
-  "authorList": ["OreCruncher"],
-  "credits": "Wirsbo for BetterRain; MrRube for Aurora Rubealis; Hurricaaane for Presence Footsteps,Mist475 for 1.7.10 maintenance",
-  "logoFile": "assets/dsurround/textures/logo.png",
-  "screenshots": [],
-  "dependencies": []
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "$modId",
+    "name": "$modName",
+    "description": "Improving Minecraft's sight and sound experience",
+    "version": "$modVersion",
+    "mcversion": "$minecraftVersion",
+    "url": "https://github.com/mist475/DynamicSurroundings/wiki",
+    "updateUrl": "",
+    "authorList": ["OreCruncher"],
+    "credits": "Wirsbo for BetterRain; MrRube for Aurora Rubealis; Hurricaaane for Presence Footsteps; Mist475 for 1.7.10 maintenance",
+    "logoFile": "assets/dsurround/textures/logo.png",
+    "screenshots": [],
+    "parent": "",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "useDependencyInformation": false
+  }]
 }
-]
